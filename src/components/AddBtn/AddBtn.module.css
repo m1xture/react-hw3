@@ -1,0 +1,11 @@
+.addbtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  outline: none;
+  background-color: rgb(29, 29, 209);
+  color: #eee;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
