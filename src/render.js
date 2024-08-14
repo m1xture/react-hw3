@@ -2,14 +2,10 @@ import Task from "./components/Task/Task";
 
 function renderMarkup() {
   try {
-    document
-        .querySelector("ul").innerHTML = "";
+    document.querySelector("ul").innerHTML = "";
     const arr = JSON.parse(localStorage.getItem("tasks"));
-    arr.map((task) =>
-      document
-        .querySelector("ul")
-        .insertAdjacentHTML("beforeend", <Task taskObj={task} />)
-    );
+    console.log(arr);
+    
   } catch (err) {
     console.log(err);
   }

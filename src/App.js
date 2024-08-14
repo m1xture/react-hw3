@@ -1,6 +1,7 @@
-import TaskList from "./components/TaskList/TaskList";
+// import TaskList from "./components/TaskList/TaskList";
 import AddBtn from "./components/AddBtn/AddBtn";
-import Modal from "./components/Modal/Modal";
+// import Modal from "./components/Modal/Modal";
+import Wrapper from "./components/Wrapper/Wrapper";
 import "./index.css";
 
 if (!JSON.parse(localStorage.getItem("login"))) {
@@ -38,8 +39,10 @@ function App() {
   return (
     <>
       <AddBtn />
-      <TaskList tasks={JSON.parse(localStorage.getItem("tasks"))}></TaskList>
-      <Modal />
+      <Wrapper>
+        {/* <TaskList tasks={JSON.parse(localStorage.getItem("tasks"))}></TaskList>
+        <Modal /> */}
+      </Wrapper>
     </>
   );
 }

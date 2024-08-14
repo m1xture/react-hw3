@@ -1,7 +1,6 @@
 import { Component } from "react";
 import css from "./Modal.module.css";
 import { v4 as uuidv4 } from "uuid";
-import renderMarkup from "../../render";
 
 class Modal extends Component {
   handleSubmit = (e) => {
@@ -19,7 +18,7 @@ class Modal extends Component {
       currentTasks.push(data);
       localStorage.setItem("tasks", JSON.stringify(currentTasks));
       e.target.parentNode.parentNode.setAttribute("data-is-hidden", true);
-      renderMarkup();
+      this.props.reload();
     } catch (err) {
       console.log(err);
     }
